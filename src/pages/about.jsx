@@ -73,9 +73,6 @@ export default function About() {
               <p>
               I have co-authored three books on product and design, &#34;Design Sprint,&#34; &#34;Product Roadmaps Relaunched&#34; and most recently &#34;Product Research Rules,&#34; which have helped thousands of product teams around the world create better products faster.
               </p>
-              <p>
-                Today, I&#39;m the VP of Product at Appcues. 
-              </p>
             </div>
           </div>
           <div className="lg:pl-20">
