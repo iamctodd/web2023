@@ -21,9 +21,9 @@ export function Footer() {
           <Container.Inner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6 text-sm font-medium text-slate-800 dark:text-slate-200">
+                <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About</NavLink>
-                <NavLink href="/portfolio">Portfolio</NavLink>
-                <NavLink href="/speaking">Speaking</NavLink>
+                <NavLink href="/writing">Writing</NavLink>
               </div>
               <p className="text-sm text-slate-400 dark:text-slate-500">
                 &copy; {new Date().getFullYear()} C. Todd Lombardo. All rights

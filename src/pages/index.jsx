@@ -84,21 +84,6 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
-
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
@@ -256,7 +241,30 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+const testimonials = [
+
+
+  {
+    body: 'C Todd\'s approach to communication often takes the form of questions. Instead of providing gut reactions, he regularly responds to a question with another question. Through his facilitation of questions, he often uncovers information that is extremely difficult to apprehend otherwise.',
+    author: {
+      name: 'Former Co-Worker',
+      handle: 'mrrowell',
+      imageUrl:
+        '',
+    }
+  },
+  {
+    body: 'What an amazing coach C Todd is. He helps coach meetings so they are impactful and empowers others on the team to do the same. This has led to a level of autonomy in product and engineering that we so desperately needed and we were struggling with before C Todd joined the team.',
+    author: {  
+      name: 'Former Direct Report',
+      handle: 'mrrowell',
+      imageUrl:
+        '',
+    },
+  },
+]
+
+export default function Home() {
   return (
     <>
       <Head>
@@ -298,11 +306,30 @@ export default function Home({ articles }) {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+        
+        <div className="-mt-8 first-line:mx-auto flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+        <p className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
+            What they said
+          </p>
+          <div className="mt-16 sm:text-[0]">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.author.handle} className="pt-8 sm:inline-block sm:w-full sm:px-4">
+                <figure className="rounded-2xl bg-slate-50 dark:bg-slate-800 p-8 text-sm leading-6">
+                  <blockquote className="text-slate-900 dark:text-slate-100">
+                    <p>{`“${testimonial.body}”`}</p>
+                  </blockquote>
+                  <figcaption className="mt-6 flex items-center gap-x-4">
+                
+                    <div>
+                      <div className="font-semibold text-zinc-900 dark:text-zinc-100">{testimonial.author.name}</div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
             ))}
           </div>
+        </div>
+      
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
