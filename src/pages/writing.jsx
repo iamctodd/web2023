@@ -53,7 +53,7 @@ export default function Speaking() {
             <Appearance
               href="https://www.oreilly.com/library/view/product-roadmaps-relaunched/9781491971710/"
               title="Product Roadmaps Relaunched"
-              description="This practical guide teaches you how to create an effective product roadmap, and demonstrates how to use the roadmap to align stakeholders and prioritize ideas and requests. With it, you&34;ll learn to communicate how your products will make your customers and organization successful."
+              description="This practical guide teaches you how to create an effective product roadmap, and demonstrates how to use the roadmap to align stakeholders and prioritize ideas and requests. With it, you'll learn to communicate how your products will make your customers and organization successful."
               event="O'Reilly Media, Inc"
               cta="Learn More"
             />
