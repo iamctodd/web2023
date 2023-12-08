@@ -126,10 +126,7 @@ function Resume() {
       title: 'VP of Product',
       logo: logoAppcues,
       start: '2022',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      end: '2023',
     },
     {
       company: 'IE University',
