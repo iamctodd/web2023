@@ -122,15 +122,6 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Superfuel',
-      title: 'Head of Products',
-      logo: logoAppcues,
-      start: '2023',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    {
       company: 'IE University',
       title: 'Adjunct Faculty',
       logo: logoIe,
@@ -140,15 +131,13 @@ function Resume() {
         dateTime: new Date().getFullYear(),
       },
     },
-  {
+    {
       company: 'Appcues',
       title: 'VP of Product',
       logo: logoAppcues,
       start: '2022',
       end: '2023',
-    },
-    },
-    
+    },   
     {
       company: 'Openly',
       title: 'VP of Product Experience',
