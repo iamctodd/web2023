@@ -1,4 +1,26 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { useEffect, useState } from 'react';
+import { AnalyticsBrowser } from '@june-so/analytics-next';
+
+const analytics = AnalyticsBrowser.load({
+  writeKey: 'QIUCX07oqL6DkJrq',
+});
+
+export function useJune(writeKey) {
+  const [analytics, setAnalytics] = useState(undefined);
+
+  useEffect(() => {
+    const loadAnalytics = async () => {
+      let response = AnalyticsBrowser.load({
+        writeKey,
+      });
+      setAnalytics(response);
+    };
+    loadAnalytics();
+  }, [writeKey]);
+
+  return analytics;
+}
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
