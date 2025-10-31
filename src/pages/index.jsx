@@ -270,6 +270,7 @@ export default function Home() {
           name="description"
           content="I&#39;m C Todd, a product leader."
         />
+        <meta name="google-site-verification" content="_BlsZxle0ZJREmgYUrD5w6Oekk4aaKVPsmCToYdJQxE" />
         <script>
             window.analytics = {};
             function juneify(writeKey) {
