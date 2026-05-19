@@ -271,21 +271,25 @@ export default function Home() {
           content="I&#39;m C Todd, a product leader."
         />
         <meta name="google-site-verification" content="_BlsZxle0ZJREmgYUrD5w6Oekk4aaKVPsmCToYdJQxE" />
-        <script>
-            window.analytics = {};
-            function juneify(writeKey) {
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.analytics = {};
+              function juneify(writeKey) {
                 window.analytics._writeKey = writeKey;
                 var script = document.createElement("script");
                 script.type = "application/javascript";
                 script.onload = function () {
-                    window.analytics.page();
+                  window.analytics.page();
                 }
                 script.src = "https://unpkg.com/@june-so/analytics-next/dist/umd/standalone.js";
                 var first = document.getElementsByTagName('script')[0];
                 first.parentNode.insertBefore(script, first);
-            }
-            juneify("QIUCX07oqL6DkJrq");
-      </script>
+              }
+              juneify("QIUCX07oqL6DkJrq");
+            `,
+          }}
+        />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
